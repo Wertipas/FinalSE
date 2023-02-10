@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stefanos WebPortfolio</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="stef.css">
+	</head>
+	<body>	
+		<button onclick="topFunction()" id="myBtn" title="Go to top">&#10094;</button>	
+		
+		<ul class="menu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#projects" class="project">Projects</a></li>
+			<li><a href="CV.pdf" target="blank">Resume</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+		
+		<section class="banner" id="home">
+			<header>
+				<a href="#" class="logo">StefanosPortfolio</a>
+			</header>
+			
+			<img src="blackie.png" class="man">
+			
+			<div class="content">
+				<div class="content-box">
+					<div class="intro">
+						<h4>~Hello</h4>
+						<h2>I'm Stefanos Eleftheriadis</h2>
+						<h3>Electrical Engineering student on Cyprus University of technology...</h3>
+					</div>
+					<div class="details">
+						<h4 style="font-size:2em;">Hello,I'm Stefanos Eleftheriadis</h4>
+						<p style="color:white; font-size:1.7em;">I'm an Electrical Engineering student on Cyprus University of technology. In the past three years I became familiar with various of technological jobs. However three of them impressed me the most:</p>
+						<ul style="color:rgb(242,134,68); padding:5%; font-size:1.5em">
+							<li>Robotic Engineering</li>
+							<li>Computer Science</li>
+							<li>Web development</li>
+						</ul>
+					</div>
+					<a href="#" class="swap">See more</a>
+					<a href="CV.pdf" target="blank">Download CV</a>
+				</div>
+			</div>
+		
+			<ul class="sci">
+				<li><a href="https://www.facebook.com/profile.php?id=100077348454505"><img src="facebook.png"></a></li>
+				<li><a href="https://www.instagram.com/stefanoseleftheriadis2143/"><img src="instagram.png"></a></li>
+			</ul>
+			
+		</section>
+		
+		<section id="projects">
+			<div class="container">
+		
+				<img class="slides" src="robotics1.jpg">
+				<img class="slides" src="robotics2.jpg">
+				<img class="slides" src="robotics3.jpg">
+				<img class="slides" src="ComputerEng1.jpg">
+				<img class="slides" src="ComputerEng2.jpeg">
+			
+				<div class="center">
+					<div class="left" onclick="plusDivs(-1)">&#10094;</div>
+				
+					<span class="badge white" onclick="currentDiv(1)"></span>
+					<span class="badge white" onclick="currentDiv(2)"></span>
+					<span class="badge white" onclick="currentDiv(3)"></span>
+					<span class="badge white" onclick="currentDiv(4)"></span>
+					<span class="badge white" onclick="currentDiv(5)"></span>
+				
+					<div class="right" onclick="plusDivs(1)">&#10095;</div>
+				</div>
+			
+			</div>
+			
+			<div class="bar" id="bar">
+				<button class="button active" onclick="openText('computer')">Computer Engineering</button>
+				<button class="button" onclick="openText('robotics')">Robotics</button>
+			</div>	
+		
+			<div class="textchange" id="computer" style="display:block">
+				<h2 class="title"><u><i>Computer Engineering</i></u></h2>
+				<p class="main_body">
+					In 2019 I worked for a month as a Computer Engineering Assistant in ComputerLand in Limassol.
+					In that period of time learned basic on how to repair laptops and desktop computer.
+					In addition, I gain experience in how a profesional works
+					and also learned to communicate with different types of people.
+					Moreover, I had the opportunity to see first hand the process of building a server
+					and at the same time I helped the team to create a local network for a company.
+				</p>
+			</div>
+		
+			<div class="textchange" id="robotics" style="display:none">
+				<h2 class="title"><u><i>Robotics</i></u></h2>
+				<p class="main_body">
+					In 2016 I participate in the First Lego League competition in order to gain experience about robots and how they work.
+					Furthermore, I learned to work with a team and the importants of teamwork.
+					In that period of time learned some basic thing on how to program a robot 
+					and at the same time develop my creativity and critical thinking as well as my social skills.
+				</p>
+			</div>
+		</section>
+		
+		<section id="contact">
+			<h1>Contact</h1>
+			<form id="form">
+				<div style="text-align:left">
+					Name<br>
+					<input type="text" name="name" id="name" size="50" required="required"><br>
+					Email<br>
+					<input type="email" name="email" id="email" size="50" required="required"><br>
+					Message<br>
+					<textarea type="text" name="message" id="message"rows="6″ cols="20″ required="required" style="text-align:left"></textarea><br>
+				
+					<input type="submit" id="button" value="Send">
+				</div>
+			</form>
+		</section>
+
+		<script src="code.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+		<script type="text/javascript">
+				emailjs.init('H_SOaUXXRDOPvS4Gv')
+		</script>
+	</body>
+	
+</html>
+
